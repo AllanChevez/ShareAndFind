@@ -13,7 +13,7 @@ class Sexo(models.Model):
 
 @python_2_unicode_compatible
 class MyPerfil(models.Model):
-	nombreUsuario = models.ForeignKey(User)
+	nombreUsuario = models.CharField(max_length=25, primary_key=True)
 	nombre = models.CharField(max_length=25)
 	apellido = models.CharField(max_length=25) 
 	sexo = models.ForeignKey(Sexo)
@@ -22,7 +22,7 @@ class MyPerfil(models.Model):
 	Avatar = models.ImageField(upload_to = "media/Avatar", null=True, blank =True)
 
 	def __str__(self):
-		return self.nombreUsuario.username
+		return self.nombreUsuario
 
 @python_2_unicode_compatible
 class Rol(models.Model):

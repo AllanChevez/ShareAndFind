@@ -27,9 +27,11 @@
                 <ul class="nav top-menu">
                     <!-- settings start -->
                     <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html">
+                        <a data-toggle="dropdown" class="dropdown-toggle">
                             <i class="fa fa-bell-o"></i>
-                            <span class="badge bg-theme">4</span>
+                            {% block notificacion %}
+                              
+                            {% endblock %}
                         </a>
                         <ul class="dropdown-menu extended tasks-bar">
                             <div class="notify-arrow notify-arrow-green"></div>
@@ -163,9 +165,9 @@
                 <!--  notification end -->
             </div>
             <div class="top-menu">
-            	<ul class="nav pull-right top-menu">
+              <ul class="nav pull-right top-menu">
                     <li><a class="logout" href="login.html">Cerrar Sesion</a></li>
-            	</ul>
+              </ul>
             </div>
         </header>
       <!--header end-->
@@ -178,10 +180,11 @@
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
-              
-              	  <p class="centered"><a href="profile.html"><img src="{% static 'assets/img/mamado.jpg' %}" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">Kevin Manzanarez</h5>
-              	  	
+                
+                  {% block perfil %}
+                    
+                  {% endblock %}
+                    
                   <li class="mt">
                       <a class="active" href="index.html">
                           <i class="fa fa-home"></i>
@@ -269,46 +272,46 @@
               <div class="row">
                   <div class="col-lg-9 main-chart">
                   
-                  	<div class="row mtbox">
-                  		<div class="col-md-2 col-sm-2 col-md-offset-1 box0">
-                  			
-					  			
-                  		</div>
-                  		<div class="col-md-2 col-sm-2 box0">
-                  			<div class="box1">
-					  			<span class="fa fa-folder"></span>
-					  			<h3>19</h3>
-                  			</div>
-					  			<p>19 Documentos subidos.</p>
-                  		</div>
-                  		<div class="col-md-2 col-sm-2 box0">
-                  			<div class="box1">
-					  			<span class="fa fa-picture-o"></span>
-					  			<h3>23</h3>
-                  			</div>
-					  			<p>13 fotos guardadas</p>
-                  		</div>
-                  		<div class="col-md-2 col-sm-2 box0">
-                  			<div class="box1">
-					  			<span class="fa fa-cog  "></span>
-					  			<h3>9</h3>
-                  			</div>
-					  			<p>Configuración.</p>
-                  		</div>
-                  		
-                  	
-                  	</div><!-- /row mt -->	
+                    <div class="row mtbox">
+                      <div class="col-md-2 col-sm-2 col-md-offset-1 box0">
+                        
                   
-                 {% block info %}
-                      	
-                      {% endblock  %}     
+                      </div>
+                      <div class="col-md-2 col-sm-2 box0">
+                        <div class="box1">
+                  <span class="fa fa-folder"></span>
+                  <h3>19</h3>
+                        </div>
+                  <p>19 Documentos subidos.</p>
+                      </div>
+                      <div class="col-md-2 col-sm-2 box0">
+                        <div class="box1">
+                  <span class="fa fa-picture-o"></span>
+                  <h3>23</h3>
+                        </div>
+                  <p>13 fotos guardadas</p>
+                      </div>
+                      <div class="col-md-2 col-sm-2 box0">
+                        <div class="box1">
+                  <span class="fa fa-cog  "></span>
+                  <h3>9</h3>
+                        </div>
+                  <p>Configuración.</p>
+                      </div>
                       
                     
-                    				
-					
-					
-					
-					
+                    </div><!-- /row mt -->  
+                  
+                 {% block info %}
+                        
+                 {% endblock  %}     
+                      
+                    
+                            
+          
+          
+          
+          
                   </div><!-- /col-lg-9 END SECTION MIDDLE -->
                   
                   
@@ -318,120 +321,120 @@
                   
                   <div class="col-lg-3 ds">
                     <!--COMPLETED ACTIONS DONUTS CHART-->
-						<h3>NOTIFICATIONS</h3>
+            <h3>NOTIFICATIONS</h3>
                                         
                       <!-- First Action -->
                       <div class="desc">
-                      	<div class="thumb">
-                      		<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                      	</div>
-                      	<div class="details">
-                      		<p><muted>2 Minutes Ago</muted><br/>
-                      		   <a href="#">James Brown</a> subscribed to your newsletter.<br/>
-                      		</p>
-                      	</div>
+                        <div class="thumb">
+                          <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+                        </div>
+                        <div class="details">
+                          <p><muted>2 Minutes Ago</muted><br/>
+                             <a href="#">James Brown</a> subscribed to your newsletter.<br/>
+                          </p>
+                        </div>
                       </div>
                       <!-- Second Action -->
                       <div class="desc">
-                      	<div class="thumb">
-                      		<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                      	</div>
-                      	<div class="details">
-                      		<p><muted>3 Hours Ago</muted><br/>
-                      		   <a href="#">Diana Kennedy</a> purchased a year subscription.<br/>
-                      		</p>
-                      	</div>
+                        <div class="thumb">
+                          <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+                        </div>
+                        <div class="details">
+                          <p><muted>3 Hours Ago</muted><br/>
+                             <a href="#">Diana Kennedy</a> purchased a year subscription.<br/>
+                          </p>
+                        </div>
                       </div>
                       <!-- Third Action -->
                       <div class="desc">
-                      	<div class="thumb">
-                      		<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                      	</div>
-                      	<div class="details">
-                      		<p><muted>7 Hours Ago</muted><br/>
-                      		   <a href="#">Brandon Page</a> purchased a year subscription.<br/>
-                      		</p>
-                      	</div>
+                        <div class="thumb">
+                          <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+                        </div>
+                        <div class="details">
+                          <p><muted>7 Hours Ago</muted><br/>
+                             <a href="#">Brandon Page</a> purchased a year subscription.<br/>
+                          </p>
+                        </div>
                       </div>
                       <!-- Fourth Action -->
                       <div class="desc">
-                      	<div class="thumb">
-                      		<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                      	</div>
-                      	<div class="details">
-                      		<p><muted>11 Hours Ago</muted><br/>
-                      		   <a href="#">Mark Twain</a> commented your post.<br/>
-                      		</p>
-                      	</div>
+                        <div class="thumb">
+                          <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+                        </div>
+                        <div class="details">
+                          <p><muted>11 Hours Ago</muted><br/>
+                             <a href="#">Mark Twain</a> commented your post.<br/>
+                          </p>
+                        </div>
                       </div>
                       <!-- Fifth Action -->
                       <div class="desc">
-                      	<div class="thumb">
-                      		<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                      	</div>
-                      	<div class="details">
-                      		<p><muted>18 Hours Ago</muted><br/>
-                      		   <a href="#">Daniel Pratt</a> purchased a wallet in your store.<br/>
-                      		</p>
-                      	</div>
+                        <div class="thumb">
+                          <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+                        </div>
+                        <div class="details">
+                          <p><muted>18 Hours Ago</muted><br/>
+                             <a href="#">Daniel Pratt</a> purchased a wallet in your store.<br/>
+                          </p>
+                        </div>
                       </div>
 
                        <!-- USERS ONLINE SECTION -->
-						<h3>TEAM MEMBERS</h3>
+            <h3>TEAM MEMBERS</h3>
                       <!-- First Member -->
                       <div class="desc">
-                      	<div class="thumb">
-                      		<img class="img-circle" src="assets/img/ui-divya.jpg" width="35px" height="35px" align="">
-                      	</div>
-                      	<div class="details">
-                      		<p><a href="#">DIVYA MANIAN</a><br/>
-                      		   <muted>Available</muted>
-                      		</p>
-                      	</div>
+                        <div class="thumb">
+                          <img class="img-circle" src="assets/img/ui-divya.jpg" width="35px" height="35px" align="">
+                        </div>
+                        <div class="details">
+                          <p><a href="#">DIVYA MANIAN</a><br/>
+                             <muted>Available</muted>
+                          </p>
+                        </div>
                       </div>
                       <!-- Second Member -->
                       <div class="desc">
-                      	<div class="thumb">
-                      		<img class="img-circle" src="assets/img/ui-sherman.jpg" width="35px" height="35px" align="">
-                      	</div>
-                      	<div class="details">
-                      		<p><a href="#">DJ SHERMAN</a><br/>
-                      		   <muted>I am Busy</muted>
-                      		</p>
-                      	</div>
+                        <div class="thumb">
+                          <img class="img-circle" src="assets/img/ui-sherman.jpg" width="35px" height="35px" align="">
+                        </div>
+                        <div class="details">
+                          <p><a href="#">DJ SHERMAN</a><br/>
+                             <muted>I am Busy</muted>
+                          </p>
+                        </div>
                       </div>
                       <!-- Third Member -->
                       <div class="desc">
-                      	<div class="thumb">
-                      		<img class="img-circle" src="assets/img/ui-danro.jpg" width="35px" height="35px" align="">
-                      	</div>
-                      	<div class="details">
-                      		<p><a href="#">DAN ROGERS</a><br/>
-                      		   <muted>Available</muted>
-                      		</p>
-                      	</div>
+                        <div class="thumb">
+                          <img class="img-circle" src="assets/img/ui-danro.jpg" width="35px" height="35px" align="">
+                        </div>
+                        <div class="details">
+                          <p><a href="#">DAN ROGERS</a><br/>
+                             <muted>Available</muted>
+                          </p>
+                        </div>
                       </div>
                       <!-- Fourth Member -->
                       <div class="desc">
-                      	<div class="thumb">
-                      		<img class="img-circle" src="assets/img/ui-zac.jpg" width="35px" height="35px" align="">
-                      	</div>
-                      	<div class="details">
-                      		<p><a href="#">Zac Sniders</a><br/>
-                      		   <muted>Available</muted>
-                      		</p>
-                      	</div>
+                        <div class="thumb">
+                          <img class="img-circle" src="assets/img/ui-zac.jpg" width="35px" height="35px" align="">
+                        </div>
+                        <div class="details">
+                          <p><a href="#">Zac Sniders</a><br/>
+                             <muted>Available</muted>
+                          </p>
+                        </div>
                       </div>
                       <!-- Fifth Member -->
                       <div class="desc">
-                      	<div class="thumb">
-                      		<img class="img-circle" src="assets/img/ui-sam.jpg" width="35px" height="35px" align="">
-                      	</div>
-                      	<div class="details">
-                      		<p><a href="#">Marcel Newman</a><br/>
-                      		   <muted>Available</muted>
-                      		</p>
-                      	</div>
+                        <div class="thumb">
+                          <img class="img-circle" src="assets/img/ui-sam.jpg" width="35px" height="35px" align="">
+                        </div>
+                        <div class="details">
+                          <p><a href="#">Marcel Newman</a><br/>
+                             <muted>Available</muted>
+                          </p>
+                        </div>
                       </div>
 
                         <!-- CALENDAR-->
