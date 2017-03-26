@@ -3,6 +3,10 @@
 {% block css %}
     
 {% endblock  %}
+{% block javascript %}
+    
+  {% endblock  %}
+
 
 {% block container %}
 
@@ -23,7 +27,7 @@
                 <ul class="nav top-menu">
                     <!-- settings start -->
                     <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html">
                             <i class="fa fa-bell-o"></i>
                             <span class="badge bg-theme">4</span>
                         </a>
@@ -175,7 +179,7 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-              	  <p class="centered"><a href="profile.html"><img src="assets/img/mamado.jpg" class="img-circle" width="60"></a></p>
+              	  <p class="centered"><a href="profile.html"><img src="{% static 'assets/img/mamado.jpg' %}" class="img-circle" width="60"></a></p>
               	  <h5 class="centered">Kevin Manzanarez</h5>
               	  	
                   <li class="mt">
