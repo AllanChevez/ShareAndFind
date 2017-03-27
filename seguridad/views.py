@@ -59,10 +59,8 @@ def registro(request):
             is_staff =is_staff,
             is_active = is_active
         )
-        usuario1 = User.objects.filter(username=usuario).get()
-        usuario2 = usuario1.username
         try:
-            usr = MyPerfil(nombreUsuario = 9, nombre = nombres, apellido = apellidos, correo = email, sexo = sexo, fechaNacimiento = (dia,mes,anio))
+            usr = MyPerfil(nombreUsuario = usuario, nombre = nombres, apellido = apellidos, sexo_id = sexo, correo = email, fechaNacimiento = str(anio+"-"+mes+"-"+dia))
             usr.save()
             return HttpResponseRedirect('/saf/')
         except Exception as e:

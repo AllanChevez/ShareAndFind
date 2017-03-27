@@ -13,7 +13,7 @@ class Sexo(models.Model):
 
 @python_2_unicode_compatible
 class MyPerfil(models.Model):
-	nombreUsuario = models.CharField(max_length=25, primary_key=True)
+	nombreUsuario = models.ForeignKey(User)
 	nombre = models.CharField(max_length=25)
 	apellido = models.CharField(max_length=25) 
 	sexo = models.ForeignKey(Sexo)
