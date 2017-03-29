@@ -5,7 +5,8 @@ from .forms import MyAuthenticationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from .models import *
+from saf.models import *
+
 def index(request):
 	if request.user.is_authenticated():
 		return HttpResponseRedirect('/saf/')

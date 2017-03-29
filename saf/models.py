@@ -22,7 +22,7 @@ class MyPerfil(models.Model):
 	Avatar = models.ImageField(upload_to = "media/Avatar", null=True, blank =True)
 
 	def __str__(self):
-		return self.nombreUsuario
+		return self.nombreUsuario.username
 
 @python_2_unicode_compatible
 class Rol(models.Model):

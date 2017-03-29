@@ -1,14 +1,48 @@
 {% extends "base_in.html" %}
 
-{% block perfil %}
-    <p class="centered"><a href="profile.html"><img src="" class="img-circle" width="60"></a></p>
-    <h5 class="centered">{{ perfil.nombre }} {{ perfil.apellido }}</h5>
-{% endblock %}
-
 {% block info %}
-
-{% block notificacion %}
-    <span class="badge bg-theme">{{noti}}</span>
-{% endblock %}
-
+ <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <i class="fa fa-clock-o fa-fw"></i>Timeline
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <ul class="timeline">
+                                    <li>
+                                        <div class="timeline-badge"><i class="fa fa-check"></i>
+                                        </div>
+                                        <div class="timeline-panel">
+                                            <div class="timeline-heading">
+                                                <h4 class="timeline-title">Codigo fuente</h4>
+                                                <p><small class="text-muted"><i class="fa fa-clock-o"></i> Hace 12 min</small>
+                                                </p>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero laboriosam dolor perspiciatis omnis exercitationem. Beatae, officia pariatur? Est cum veniam excepturi. Maiores praesentium, porro voluptas suscipit facere rem dicta, debitis.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                   
+                                    
+                                  <hr>
+                                    
+                                    <li class="timeline-inverted">
+                                        <div class="timeline-badge success"><i class="fa fa-graduation-cap"></i>
+                                        </div>
+                                        <div class="timeline-panel">
+                                            <div class="timeline-heading">
+                                                <h4 class="timeline-title">Documento Word</h4>
+                                                <p><small class="text-muted"><i class="fa fa-clock-o"></i> Hace 12 min</small>
+                                                </p>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt obcaecati, quaerat tempore officia voluptas debitis consectetur culpa amet, accusamus dolorum fugiat, animi dicta aperiam, enim incidunt quisquam maxime neque eaque.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <hr>
+                                </ul>
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
 {% endblock  %}
